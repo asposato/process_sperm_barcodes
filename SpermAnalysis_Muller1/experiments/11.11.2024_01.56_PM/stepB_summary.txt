@@ -1,0 +1,279 @@
+Summary of step B: Filter barcodes by reads and proportion cutoffs.
+
+For each .passReadCounts file, if a barcode had fewer than 10 reads or a proportion below 0.005,
+it was removed from the file.
+
+Passing barcodes for each sample were written to a sample file with the extension: .filteredReadCounts
+
+A list of barcodes that were removed was written to a sample file that ends with 'stepB_removed_barcodes.txt'
+This may be useful to verify that the changes from .passReadCounts to .filteredReadCounts were accurate.
+
+Here is a recap of the filtering for each sample: 
+
+fish1_s3_rep1 started with 530 barcodes. 522 barcodes were removed.
+fish1_s3_rep1.filteredReadCounts barcode count: 8
+
+fish1_s3_rep2 started with 1098 barcodes. 1088 barcodes were removed.
+fish1_s3_rep2.filteredReadCounts barcode count: 10
+
+fish1_s3_rep3 started with 1133 barcodes. 1122 barcodes were removed.
+fish1_s3_rep3.filteredReadCounts barcode count: 11
+
+fish1_s4_rep1 started with 514 barcodes. 503 barcodes were removed.
+fish1_s4_rep1.filteredReadCounts barcode count: 11
+
+fish1_s4_rep2 started with 568 barcodes. 556 barcodes were removed.
+fish1_s4_rep2.filteredReadCounts barcode count: 12
+
+fish1_s4_rep3 started with 520 barcodes. 510 barcodes were removed.
+fish1_s4_rep3.filteredReadCounts barcode count: 10
+
+fish1_s5_rep1 started with 413 barcodes. 403 barcodes were removed.
+fish1_s5_rep1.filteredReadCounts barcode count: 10
+
+fish1_s5_rep2 started with 349 barcodes. 340 barcodes were removed.
+fish1_s5_rep2.filteredReadCounts barcode count: 9
+
+fish1_s5_rep3 started with 269 barcodes. 259 barcodes were removed.
+fish1_s5_rep3.filteredReadCounts barcode count: 10
+
+fish1_s6_rep1 started with 427 barcodes. 416 barcodes were removed.
+fish1_s6_rep1.filteredReadCounts barcode count: 11
+
+fish1_s6_rep2 started with 482 barcodes. 471 barcodes were removed.
+fish1_s6_rep2.filteredReadCounts barcode count: 11
+
+fish1_s6_rep3 started with 384 barcodes. 372 barcodes were removed.
+fish1_s6_rep3.filteredReadCounts barcode count: 12
+
+fish1_s7_rep1 started with 117 barcodes. 108 barcodes were removed.
+fish1_s7_rep1.filteredReadCounts barcode count: 9
+
+fish1_s7_rep2 started with 232 barcodes. 223 barcodes were removed.
+fish1_s7_rep2.filteredReadCounts barcode count: 9
+
+fish1_s7_rep3 started with 90 barcodes. 82 barcodes were removed.
+fish1_s7_rep3.filteredReadCounts barcode count: 8
+
+fish1_s8_rep1 started with 397 barcodes. 387 barcodes were removed.
+fish1_s8_rep1.filteredReadCounts barcode count: 10
+
+fish1_s8_rep2 started with 355 barcodes. 346 barcodes were removed.
+fish1_s8_rep2.filteredReadCounts barcode count: 9
+
+fish1_s8_rep3 started with 253 barcodes. 245 barcodes were removed.
+fish1_s8_rep3.filteredReadCounts barcode count: 8
+
+fish1_s9_rep1 started with 2623 barcodes. 2590 barcodes were removed.
+fish1_s9_rep1.filteredReadCounts barcode count: 33
+
+fish1_s9_rep3 started with 137 barcodes. 131 barcodes were removed.
+fish1_s9_rep3.filteredReadCounts barcode count: 6
+
+fish1_s10_rep1 started with 448 barcodes. 436 barcodes were removed.
+fish1_s10_rep1.filteredReadCounts barcode count: 12
+
+fish1_s10_rep2 started with 464 barcodes. 453 barcodes were removed.
+fish1_s10_rep2.filteredReadCounts barcode count: 11
+
+fish1_s10_rep3 started with 407 barcodes. 395 barcodes were removed.
+fish1_s10_rep3.filteredReadCounts barcode count: 12
+
+fish1_s11_rep1 started with 622 barcodes. 610 barcodes were removed.
+fish1_s11_rep1.filteredReadCounts barcode count: 12
+
+fish1_s11_rep2 started with 511 barcodes. 499 barcodes were removed.
+fish1_s11_rep2.filteredReadCounts barcode count: 12
+
+fish1_s11_rep3 started with 497 barcodes. 486 barcodes were removed.
+fish1_s11_rep3.filteredReadCounts barcode count: 11
+
+fish1_s12_rep1 started with 350 barcodes. 335 barcodes were removed.
+fish1_s12_rep1.filteredReadCounts barcode count: 15
+
+fish1_s12_rep2 started with 486 barcodes. 468 barcodes were removed.
+fish1_s12_rep2.filteredReadCounts barcode count: 18
+
+fish1_s12_rep3 started with 287 barcodes. 275 barcodes were removed.
+fish1_s12_rep3.filteredReadCounts barcode count: 12
+
+fish5_s3_rep1 started with 746 barcodes. 736 barcodes were removed.
+fish5_s3_rep1.filteredReadCounts barcode count: 10
+
+fish5_s3_rep2 started with 1296 barcodes. 1288 barcodes were removed.
+fish5_s3_rep2.filteredReadCounts barcode count: 8
+
+fish5_s3_rep3 started with 1360 barcodes. 1351 barcodes were removed.
+fish5_s3_rep3.filteredReadCounts barcode count: 9
+
+fish5_s4_rep1 started with 738 barcodes. 728 barcodes were removed.
+fish5_s4_rep1.filteredReadCounts barcode count: 10
+
+fish5_s4_rep2 started with 706 barcodes. 691 barcodes were removed.
+fish5_s4_rep2.filteredReadCounts barcode count: 15
+
+fish5_s4_rep3 started with 807 barcodes. 791 barcodes were removed.
+fish5_s4_rep3.filteredReadCounts barcode count: 16
+
+fish5_s5_rep1 started with 420 barcodes. 408 barcodes were removed.
+fish5_s5_rep1.filteredReadCounts barcode count: 12
+
+fish5_s5_rep2 started with 314 barcodes. 302 barcodes were removed.
+fish5_s5_rep2.filteredReadCounts barcode count: 12
+
+fish5_s5_rep3 started with 420 barcodes. 408 barcodes were removed.
+fish5_s5_rep3.filteredReadCounts barcode count: 12
+
+fish5_s6_rep1 started with 866 barcodes. 852 barcodes were removed.
+fish5_s6_rep1.filteredReadCounts barcode count: 14
+
+fish5_s6_rep2 started with 816 barcodes. 804 barcodes were removed.
+fish5_s6_rep2.filteredReadCounts barcode count: 12
+
+fish5_s6_rep3 started with 918 barcodes. 906 barcodes were removed.
+fish5_s6_rep3.filteredReadCounts barcode count: 12
+
+fish5_s7_rep1 started with 804 barcodes. 791 barcodes were removed.
+fish5_s7_rep1.filteredReadCounts barcode count: 13
+
+fish5_s7_rep2 started with 673 barcodes. 660 barcodes were removed.
+fish5_s7_rep2.filteredReadCounts barcode count: 13
+
+fish5_s7_rep3 started with 805 barcodes. 792 barcodes were removed.
+fish5_s7_rep3.filteredReadCounts barcode count: 13
+
+fish5_s8_rep1 started with 326 barcodes. 312 barcodes were removed.
+fish5_s8_rep1.filteredReadCounts barcode count: 14
+
+fish5_s8_rep2 started with 301 barcodes. 288 barcodes were removed.
+fish5_s8_rep2.filteredReadCounts barcode count: 13
+
+fish5_s8_rep3 started with 410 barcodes. 397 barcodes were removed.
+fish5_s8_rep3.filteredReadCounts barcode count: 13
+
+fish5_s9_rep1 started with 1089 barcodes. 1076 barcodes were removed.
+fish5_s9_rep1.filteredReadCounts barcode count: 13
+
+fish5_s9_rep2 started with 1422 barcodes. 1408 barcodes were removed.
+fish5_s9_rep2.filteredReadCounts barcode count: 14
+
+fish5_s9_rep3 started with 970 barcodes. 957 barcodes were removed.
+fish5_s9_rep3.filteredReadCounts barcode count: 13
+
+fish5_s10_rep1 started with 393 barcodes. 380 barcodes were removed.
+fish5_s10_rep1.filteredReadCounts barcode count: 13
+
+fish5_s10_rep2 started with 397 barcodes. 384 barcodes were removed.
+fish5_s10_rep2.filteredReadCounts barcode count: 13
+
+fish5_s10_rep3 started with 503 barcodes. 489 barcodes were removed.
+fish5_s10_rep3.filteredReadCounts barcode count: 14
+
+fish5_s11_rep1 started with 620 barcodes. 614 barcodes were removed.
+fish5_s11_rep1.filteredReadCounts barcode count: 6
+
+fish5_s11_rep2 started with 1130 barcodes. 1123 barcodes were removed.
+fish5_s11_rep2.filteredReadCounts barcode count: 7
+
+fish5_s11_rep3 started with 378 barcodes. 372 barcodes were removed.
+fish5_s11_rep3.filteredReadCounts barcode count: 6
+
+fish5_s12_rep1 started with 1182 barcodes. 1176 barcodes were removed.
+fish5_s12_rep1.filteredReadCounts barcode count: 6
+
+fish5_s12_rep2 started with 1165 barcodes. 1159 barcodes were removed.
+fish5_s12_rep2.filteredReadCounts barcode count: 6
+
+fish5_s12_rep3 started with 1553 barcodes. 1544 barcodes were removed.
+fish5_s12_rep3.filteredReadCounts barcode count: 9
+
+fish10_s8_rep1 started with 651 barcodes. 648 barcodes were removed.
+fish10_s8_rep1.filteredReadCounts barcode count: 3
+
+fish10_s8_rep2 started with 779 barcodes. 774 barcodes were removed.
+fish10_s8_rep2.filteredReadCounts barcode count: 5
+
+fish10_s8_rep3 started with 651 barcodes. 647 barcodes were removed.
+fish10_s8_rep3.filteredReadCounts barcode count: 4
+
+fish10_s9_rep1 started with 2801 barcodes. 2799 barcodes were removed.
+fish10_s9_rep1.filteredReadCounts barcode count: 2
+
+fish10_s9_rep2 started with 1966 barcodes. 1964 barcodes were removed.
+fish10_s9_rep2.filteredReadCounts barcode count: 2
+
+fish10_s9_rep3 started with 2418 barcodes. 2416 barcodes were removed.
+fish10_s9_rep3.filteredReadCounts barcode count: 2
+
+fish10_s10_rep1 started with 1097 barcodes. 1094 barcodes were removed.
+fish10_s10_rep1.filteredReadCounts barcode count: 3
+
+fish10_s10_rep2 started with 1086 barcodes. 1078 barcodes were removed.
+fish10_s10_rep2.filteredReadCounts barcode count: 8
+
+fish10_s10_rep3 started with 1117 barcodes. 1113 barcodes were removed.
+fish10_s10_rep3.filteredReadCounts barcode count: 4
+
+fishctrl3_s3_rep1 started with 2099 barcodes. 2098 barcodes were removed.
+fishctrl3_s3_rep1.filteredReadCounts barcode count: 1
+
+fishctrl3_s3_rep2 started with 4244 barcodes. 4243 barcodes were removed.
+fishctrl3_s3_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s3_rep3 started with 4565 barcodes. 4564 barcodes were removed.
+fishctrl3_s3_rep3.filteredReadCounts barcode count: 1
+
+fishctrl3_s5_rep1 started with 804 barcodes. 794 barcodes were removed.
+fishctrl3_s5_rep1.filteredReadCounts barcode count: 10
+
+fishctrl3_s5_rep2 started with 793 barcodes. 783 barcodes were removed.
+fishctrl3_s5_rep2.filteredReadCounts barcode count: 10
+
+fishctrl3_s5_rep3 started with 737 barcodes. 731 barcodes were removed.
+fishctrl3_s5_rep3.filteredReadCounts barcode count: 6
+
+fishctrl3_s6_rep1 started with 2559 barcodes. 2556 barcodes were removed.
+fishctrl3_s6_rep1.filteredReadCounts barcode count: 3
+
+fishctrl3_s6_rep2 started with 2366 barcodes. 2365 barcodes were removed.
+fishctrl3_s6_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s6_rep3 started with 2645 barcodes. 2643 barcodes were removed.
+fishctrl3_s6_rep3.filteredReadCounts barcode count: 2
+
+fishctrl3_s7_rep1 started with 1732 barcodes. 1731 barcodes were removed.
+fishctrl3_s7_rep1.filteredReadCounts barcode count: 1
+
+fishctrl3_s7_rep2 started with 2651 barcodes. 2650 barcodes were removed.
+fishctrl3_s7_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s7_rep3 started with 3018 barcodes. 3017 barcodes were removed.
+fishctrl3_s7_rep3.filteredReadCounts barcode count: 1
+
+fishctrl3_s8_rep1 started with 1026 barcodes. 1025 barcodes were removed.
+fishctrl3_s8_rep1.filteredReadCounts barcode count: 1
+
+fishctrl3_s8_rep2 started with 845 barcodes. 844 barcodes were removed.
+fishctrl3_s8_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s8_rep3 started with 1121 barcodes. 1120 barcodes were removed.
+fishctrl3_s8_rep3.filteredReadCounts barcode count: 1
+
+fishctrl3_s9_rep1 started with 2123 barcodes. 2122 barcodes were removed.
+fishctrl3_s9_rep1.filteredReadCounts barcode count: 1
+
+fishctrl3_s9_rep2 started with 2214 barcodes. 2213 barcodes were removed.
+fishctrl3_s9_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s9_rep3 started with 1867 barcodes. 1866 barcodes were removed.
+fishctrl3_s9_rep3.filteredReadCounts barcode count: 1
+
+fishctrl3_s10_rep1 started with 1689 barcodes. 1688 barcodes were removed.
+fishctrl3_s10_rep1.filteredReadCounts barcode count: 1
+
+fishctrl3_s10_rep2 started with 1967 barcodes. 1966 barcodes were removed.
+fishctrl3_s10_rep2.filteredReadCounts barcode count: 1
+
+fishctrl3_s10_rep3 started with 1380 barcodes. 1379 barcodes were removed.
+fishctrl3_s10_rep3.filteredReadCounts barcode count: 1
+
