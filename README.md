@@ -3,12 +3,20 @@
 This is a pipeline for filtering lineage barcodes retrieved from sperm. 
 It adds essential steps in the Sperm Analysis pipeline developed by Kimberly Truong.
 
-**Workflow:**
-	A. Throw out whole files that have low total reads and write passed-samples-info.csv
-	B. Filter barcoeds by reads and proportion cuttoffs within files
-	C. Identify contaminant barcodes
-	D. Remove contaminant barcodes from read files where they don't belong 
-	E. Make a barcode matrix which can be used to generate Muller plots
+### Workflow: 
+#### A. Throw out whole files that have low total reads and write passed-samples-info.csv
+##### Files that pass this step are given the extension: .passReadCounts.
+##### The passed-samples-info.csv is generated using only the .passReadCounts files. This csv will be important for step E when making the barcode matrix.
+#### B. Filter barcoeds by reads and proportion cuttoffs within files
+##### Barcodes that pass this step are added to files given the extension: .filteredReadCounts.
+#### C. Identify contaminant barcodes
+##### To examine barcodes for each fish, a dictionary of barcodes was created for each fish.
+##### Fish dictionaries are written to files and stored in the "fish_dictionaries" folder which is at the same level as SpermAnalysis_Muller1.
+##### The list of questionable and good barcodes were written to files in the "fish_dictionaries" folder.
+#### D. Remove contaminant barcodes from read files where they don't belong 
+##### Barcodes that pass this step are added to files given the extension: .filteredQualityReadCounts.
+#### E. Make a barcode matrix which can be used to generate Muller plots
+##### A barcode matrix file is written to the experiments folder and used for generating Muller plots
 
 ### Directory Structure
 The directory structure is adapted from Kimberly's approach with some notable differences. 
