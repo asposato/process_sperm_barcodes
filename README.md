@@ -87,7 +87,6 @@ directory_name
   ├── SpermAnalysis_Muller1 
   	├── data
   	├── experiments
-
 ```
 First, populate `directory_name/SpermAnalysis_Muller1/` with the viz folders. You will need a folder for each sample replicate like `fish1_s1_rep1` and within that folder the `fish1_s1_rep1.allReadCounts` file at the minimum. 
 Beware: if you change the name of the SpermAnalysis_Muller1 folder, you will also need to do so anywhere it appears within the jupyter notebook `process_sperm_barcodes.ipynb`. 
