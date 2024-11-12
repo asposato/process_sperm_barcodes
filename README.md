@@ -4,11 +4,11 @@ This is a pipeline for filtering lineage barcodes retrieved from sperm.
 It adds essential steps in the Sperm Analysis pipeline developed by Kimberly Truong.
 
 **Workflow:**
-	1. Throw out whole files that have low total reads and write passed-samples-info.csv
-	2. Filter barcoeds by reads and proportion cuttoffs within files
-	3. Identify contaminant barcodes
-	4. Remove contaminant barcodes from read files where they don't belong 
-	5. Make a barcode matrix which can be used to generate Muller plots
+	A. Throw out whole files that have low total reads and write passed-samples-info.csv
+	B. Filter barcoeds by reads and proportion cuttoffs within files
+	C. Identify contaminant barcodes
+	D. Remove contaminant barcodes from read files where they don't belong 
+	E. Make a barcode matrix which can be used to generate Muller plots
 
 ### Directory Structure
 The directory structure is adapted from Kimberly's approach with some notable differences. 
@@ -21,9 +21,9 @@ process_sperm_barcodes
   		├── viz-Output
   			├── fish1_s1_rep1
 				├── fish1_s1_rep1.allReadCounts (input)
-				├── fish1_s1_rep1.passReadCounts (intermediate output from step 1)
-				├── fish1_s1_rep1.filteredReadCounts (intermediate output from step 2)
-				├── fish1_s1_rep1.filteredQualityReadCounts (output from step 4)
+				├── fish1_s1_rep1.passReadCounts (intermediate output from step A)
+				├── fish1_s1_rep1.filteredReadCounts (intermediate output from step B)
+				├── fish1_s1_rep1.filteredQualityReadCounts (output from step D)
 				├── fish1_s1_rep1_stepB_removed_barcodes.txt (related to .filteredReadCounts)
 			├── fish1_s1_rep2
 			├── fish1_s1_rep3
@@ -31,7 +31,7 @@ process_sperm_barcodes
 			.
 			.
 			.
-    	├── passed-samples-info.csv  (generated during step 1)
+    	├── passed-samples-info.csv  (generated during step A)
   	├── experiments
   		├── 11.11.2024_01.56_PM
   			├── barcodeMatrix_3filters.tsv (final output before Muller plot generation)
@@ -64,18 +64,18 @@ process_sperm_barcodes
 For this pipeline to run, you need only the `.allReadCounts` file. However, you may find it easier to grab the whole visualization folder for a sample. 
 The presence of files such as `.topReadEventsNew` will not disrupt this process.  
 
-`data` also holds the `passed-samples-info.csv` file. Previously, `samples-info.csv` was manually written. In this pipeline, `passed-samples-info.csv` is automatically written following filtering step 1. 
+`data` also holds the `passed-samples-info.csv` file. Previously, `samples-info.csv` was manually written. In this pipeline, `passed-samples-info.csv` is automatically written following filtering step A. 
 
-`stepB_removed_barcodes.txt` for each sample contains the barcodes that do not pass the reads and proportion threshold from step 2. They will be missing from the `.filteredReadCounts` file but present in the `.passReadCounts` file.
+`stepB_removed_barcodes.txt` for each sample contains the barcodes that do not pass the reads and proportion threshold from step B. They will be missing from the `.filteredReadCounts` file but present in the `.passReadCounts` file.
 
-`fish_dictionaries` contains files that are generated during step 3. It is created by the pipeline. The purpose is for a dictionary of each fish to store the list of all barcodes that ever show up in that animal, which samples each was detected in, how many reads were associated, and what proportion of the file's reads it comprised. These dictionaries are then used to detect questionable barcodes. 
-Questionable barcodes are barcodes that show up in multiple fish. During step 4 (or step D), if a barcode has a clear source fish, it is assigned to that fish. If the source of contamination cannot be determined, it is considered a contaminant everywhere (A.K.A. promiscuous barcode). `questionable_barcodes_list.txt` contains the list of barcodes that show up in multiple animals. 
+`fish_dictionaries` contains files that are generated during step C. It is created by the pipeline. The purpose is for a dictionary of each fish to store the list of all barcodes that ever show up in that animal, which samples each was detected in, how many reads were associated, and what proportion of the file's reads it comprised. These dictionaries are then used to detect questionable barcodes. 
+Questionable barcodes are barcodes that show up in multiple fish. During step D, if a barcode has a clear source fish, it is assigned to that fish. If the source of contamination cannot be determined, it is considered a contaminant everywhere (A.K.A. promiscuous barcode). `questionable_barcodes_list.txt` contains the list of barcodes that show up in multiple animals. 
 
-`experiments` holds the output file `barcodeMatrix_3filters.tsv` within a folder that is named after the date and time the pipeline finished running. You can run the pipeline multiple times and a new output folder will be created for each run. This output file will be used to generate Muller plots in R. Most of step 5 (or step E) in this pipeline is original code from Kimberly. Additionally, a barcode matrix file is generated for each fish in your data. 
+`experiments` holds the output file `barcodeMatrix_3filters.tsv` within a folder that is named after the date and time the pipeline finished running. You can run the pipeline multiple times and a new output folder will be created for each run. This output file will be used to generate Muller plots in R. Most of step E in this pipeline is original code from Kimberly. Additionally, a barcode matrix file is generated for each fish in your data. 
 Subfolders in `experiments` also contain summary text files of the progress of the pipeline. A full summary is written to `full_job_report.txt`. 
 
 
-## The Data in this example
+### The Data in this example
 These are monthly sperm samples from 3 double-edited fish starting around 4 months old. `passed-samples-info.csv` contains some interesting metadata about these animals if you're curious. 
 
 ### Adapting to run for your data
@@ -119,3 +119,6 @@ Please stick with `fish1_s1_rep1`.
 Windows does some things differently than Mac (the computer this code was written with). One example is the direction of slashes in directory paths: 
 `directory_name/SpermAnalysis_Muller1/` (Mac) vs `C:directory_name\SpermAnalysis_Muller1\` (Windows). 
 You may need to spend some time adapting the code to run without error because of these syntax differences. 
+
+### Misc 
+`questionable_barcode_ratios.ipynb` is an exploratory script. Sections of it are incorporated into step 3 (or Step C) of the pipeline. 
