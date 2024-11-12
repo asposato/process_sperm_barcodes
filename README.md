@@ -82,10 +82,6 @@ Questionable barcodes are barcodes that show up in multiple fish. During step D,
 `experiments` holds the output file `barcodeMatrix_3filters.tsv` within a folder that is named after the date and time the pipeline finished running. You can run the pipeline multiple times and a new output folder will be created for each run. This output file will be used to generate Muller plots in R. Most of step E in this pipeline is original code from Kimberly. Additionally, a barcode matrix file is generated for each fish in your data. 
 Subfolders in `experiments` also contain summary text files of the progress of the pipeline. A full summary is written to `full_job_report.txt`. 
 
-
-### The Data in this example
-These are monthly sperm samples from 3 double-edited fish starting around 4 months old. `passed-samples-info.csv` contains some interesting metadata about these animals if you're curious. 
-
 ### Adapting to run for your data
 
 To get started with your own dataset, first set up your directory. It should look like this: 
@@ -96,7 +92,7 @@ directory_name
   	├── data
   	├── experiments
 ```
-First, populate `directory_name/SpermAnalysis_Muller1/` with the viz folders. You will need a folder for each sample replicate like `fish1_s1_rep1` and within that folder the `fish1_s1_rep1.allReadCounts` file at the minimum. 
+Next, populate `directory_name/SpermAnalysis_Muller1/` with the viz folders. You will need a folder for each sample replicate like `fish1_s1_rep1` and within that folder the `fish1_s1_rep1.allReadCounts` file at the minimum. 
 Beware: if you change the name of the SpermAnalysis_Muller1 folder, you will also need to do so anywhere it appears within the jupyter notebook `process_sperm_barcodes.ipynb`. 
 
 Next, download and save the `process_sperm_barcodes.ipynb` to `directory_name`. It should be at the same "level" as `SpermAnalysis_Muller1`
@@ -115,6 +111,8 @@ Open up a terminal and clone the repository onto your local computer:
 git clone https://github.com/Gagnon-lab/process_sperm_barcodes.git
 cd process_sperm_barcodes
 ```
+##### The data in this example:
+These are monthly sperm samples from 3 double-edited fish starting around 4 months old. `passed-samples-info.csv` contains some interesting metadata about these animals if you're curious. 
 
 ### Warnings 
 
