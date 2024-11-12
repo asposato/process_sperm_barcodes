@@ -126,4 +126,4 @@ Windows does some things differently than Mac (the computer this code was writte
 You may need to spend some time adapting the code to run without error because of these syntax differences. 
 
 ### Misc 
-`questionable_barcode_ratios.ipynb` is an exploratory script. Sections of it are incorporated into step 3 (or Step C) of the pipeline. 
+`questionable_barcode_ratios.ipynb` is an exploratory script. Sections of it are incorporated into step C of the pipeline. 
