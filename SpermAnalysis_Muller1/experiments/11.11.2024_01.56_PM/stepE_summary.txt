@@ -1,5 +1,0 @@
-Summary of step E: A barcode matrix file is written to the experiments folder and
-is used for generating Muller plots.
-
-A barcode matrix file is also written for each fish in your samples.
-The barcodes present in these matrix files will have passed all three filters (steps A, B and D)
