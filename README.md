@@ -121,8 +121,7 @@ Make sure the ipython notebook file is stored at the same level as "SpermAnalysi
 This pipeline will break if you change your naming system for sample replicates (i.e. `rep1_s2_1fish`) or mess with the data structure Kimberly established.
 Please stick with `fish1_s1_rep1`.
 
-Windows does some things differently than Mac (the computer this code was written with). One example is the direction of slashes in directory paths: 
-`directory_name/SpermAnalysis_Muller1/` (Mac) vs `C:directory_name\SpermAnalysis_Muller1\` (Windows). 
+Windows does some things differently than Mac (the computer this code was written with). One example is the way filepath slashes are handled with the .split() method. While `read_file.split('/')` will work on a Mac, this should be changed to `read_file.split('\\')` on Windows. 
 You may need to spend some time adapting the code to run without error because of these syntax differences. 
 
 ### Misc 
