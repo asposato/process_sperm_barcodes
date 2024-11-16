@@ -126,3 +126,4 @@ You may need to spend some time adapting the code to run without error because o
 
 ### Misc 
 `questionable_barcode_ratios.ipynb` is an exploratory script. Sections of it are incorporated into step C of the pipeline. 
+`.ipynb_checkpoints` contains older versions of different parts of this pipeline. It may be useful to explore.
