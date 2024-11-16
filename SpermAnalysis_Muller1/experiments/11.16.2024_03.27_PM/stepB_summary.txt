@@ -1,0 +1,726 @@
+Summary of step B: Filter barcodes by reads and proportion cutoffs.
+
+For each .passReadCounts file, if a barcode had fewer than 10 reads or a proportion below 0.005,
+it was removed from the file.
+
+Passing barcodes for each sample were written to a sample file with the extension: .filteredReadCounts
+
+A list of barcodes that were removed was written to a sample file that ends with 'stepB_removed_barcodes.txt'
+This may be useful to verify that the changes from .passReadCounts to .filteredReadCounts were accurate.
+
+Here is a recap of the filtering for each sample: 
+
+**************************************************************************************** 
+
+fish1_s3_rep1 had 4737 reads in the .passReadCounts file. Filtering removed 692 reads.
+There are now 4045 reads in the fish1_s3_rep1.filteredReadCounts file.
+
+fish1_s3_rep1 had 530 barcodes in the .passReadCounts file. Filtering removed 522 barcodes.
+There are now 8 barcodes in the fish1_s3_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s3_rep2 had 9463 reads in the .passReadCounts file. Filtering removed 1555 reads.
+There are now 7908 reads in the fish1_s3_rep2.filteredReadCounts file.
+
+fish1_s3_rep2 had 1098 barcodes in the .passReadCounts file. Filtering removed 1088 barcodes.
+There are now 10 barcodes in the fish1_s3_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s3_rep3 had 10116 reads in the .passReadCounts file. Filtering removed 1645 reads.
+There are now 8471 reads in the fish1_s3_rep3.filteredReadCounts file.
+
+fish1_s3_rep3 had 1133 barcodes in the .passReadCounts file. Filtering removed 1122 barcodes.
+There are now 11 barcodes in the fish1_s3_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s4_rep1 had 12421 reads in the .passReadCounts file. Filtering removed 2129 reads.
+There are now 10292 reads in the fish1_s4_rep1.filteredReadCounts file.
+
+fish1_s4_rep1 had 514 barcodes in the .passReadCounts file. Filtering removed 503 barcodes.
+There are now 11 barcodes in the fish1_s4_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s4_rep2 had 12655 reads in the .passReadCounts file. Filtering removed 2204 reads.
+There are now 10451 reads in the fish1_s4_rep2.filteredReadCounts file.
+
+fish1_s4_rep2 had 568 barcodes in the .passReadCounts file. Filtering removed 556 barcodes.
+There are now 12 barcodes in the fish1_s4_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s4_rep3 had 12381 reads in the .passReadCounts file. Filtering removed 2314 reads.
+There are now 10067 reads in the fish1_s4_rep3.filteredReadCounts file.
+
+fish1_s4_rep3 had 520 barcodes in the .passReadCounts file. Filtering removed 510 barcodes.
+There are now 10 barcodes in the fish1_s4_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s5_rep1 had 25412 reads in the .passReadCounts file. Filtering removed 2013 reads.
+There are now 23399 reads in the fish1_s5_rep1.filteredReadCounts file.
+
+fish1_s5_rep1 had 413 barcodes in the .passReadCounts file. Filtering removed 403 barcodes.
+There are now 10 barcodes in the fish1_s5_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s5_rep2 had 20158 reads in the .passReadCounts file. Filtering removed 1626 reads.
+There are now 18532 reads in the fish1_s5_rep2.filteredReadCounts file.
+
+fish1_s5_rep2 had 349 barcodes in the .passReadCounts file. Filtering removed 340 barcodes.
+There are now 9 barcodes in the fish1_s5_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s5_rep3 had 11275 reads in the .passReadCounts file. Filtering removed 1239 reads.
+There are now 10036 reads in the fish1_s5_rep3.filteredReadCounts file.
+
+fish1_s5_rep3 had 269 barcodes in the .passReadCounts file. Filtering removed 259 barcodes.
+There are now 10 barcodes in the fish1_s5_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s6_rep1 had 23533 reads in the .passReadCounts file. Filtering removed 1822 reads.
+There are now 21711 reads in the fish1_s6_rep1.filteredReadCounts file.
+
+fish1_s6_rep1 had 427 barcodes in the .passReadCounts file. Filtering removed 416 barcodes.
+There are now 11 barcodes in the fish1_s6_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s6_rep2 had 22967 reads in the .passReadCounts file. Filtering removed 1788 reads.
+There are now 21179 reads in the fish1_s6_rep2.filteredReadCounts file.
+
+fish1_s6_rep2 had 482 barcodes in the .passReadCounts file. Filtering removed 471 barcodes.
+There are now 11 barcodes in the fish1_s6_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s6_rep3 had 23182 reads in the .passReadCounts file. Filtering removed 1363 reads.
+There are now 21819 reads in the fish1_s6_rep3.filteredReadCounts file.
+
+fish1_s6_rep3 had 384 barcodes in the .passReadCounts file. Filtering removed 372 barcodes.
+There are now 12 barcodes in the fish1_s6_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s7_rep1 had 8499 reads in the .passReadCounts file. Filtering removed 282 reads.
+There are now 8217 reads in the fish1_s7_rep1.filteredReadCounts file.
+
+fish1_s7_rep1 had 117 barcodes in the .passReadCounts file. Filtering removed 108 barcodes.
+There are now 9 barcodes in the fish1_s7_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s7_rep2 had 15142 reads in the .passReadCounts file. Filtering removed 722 reads.
+There are now 14420 reads in the fish1_s7_rep2.filteredReadCounts file.
+
+fish1_s7_rep2 had 232 barcodes in the .passReadCounts file. Filtering removed 223 barcodes.
+There are now 9 barcodes in the fish1_s7_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s7_rep3 had 6436 reads in the .passReadCounts file. Filtering removed 209 reads.
+There are now 6227 reads in the fish1_s7_rep3.filteredReadCounts file.
+
+fish1_s7_rep3 had 90 barcodes in the .passReadCounts file. Filtering removed 82 barcodes.
+There are now 8 barcodes in the fish1_s7_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s8_rep1 had 26110 reads in the .passReadCounts file. Filtering removed 2028 reads.
+There are now 24082 reads in the fish1_s8_rep1.filteredReadCounts file.
+
+fish1_s8_rep1 had 397 barcodes in the .passReadCounts file. Filtering removed 387 barcodes.
+There are now 10 barcodes in the fish1_s8_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s8_rep2 had 22447 reads in the .passReadCounts file. Filtering removed 2069 reads.
+There are now 20378 reads in the fish1_s8_rep2.filteredReadCounts file.
+
+fish1_s8_rep2 had 355 barcodes in the .passReadCounts file. Filtering removed 346 barcodes.
+There are now 9 barcodes in the fish1_s8_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s8_rep3 had 14416 reads in the .passReadCounts file. Filtering removed 1125 reads.
+There are now 13291 reads in the fish1_s8_rep3.filteredReadCounts file.
+
+fish1_s8_rep3 had 253 barcodes in the .passReadCounts file. Filtering removed 245 barcodes.
+There are now 8 barcodes in the fish1_s8_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s9_rep1 had 50380 reads in the .passReadCounts file. Filtering removed 19193 reads.
+There are now 31187 reads in the fish1_s9_rep1.filteredReadCounts file.
+
+fish1_s9_rep1 had 2623 barcodes in the .passReadCounts file. Filtering removed 2590 barcodes.
+There are now 33 barcodes in the fish1_s9_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s9_rep3 had 4600 reads in the .passReadCounts file. Filtering removed 191 reads.
+There are now 4409 reads in the fish1_s9_rep3.filteredReadCounts file.
+
+fish1_s9_rep3 had 137 barcodes in the .passReadCounts file. Filtering removed 131 barcodes.
+There are now 6 barcodes in the fish1_s9_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s10_rep1 had 40540 reads in the .passReadCounts file. Filtering removed 2727 reads.
+There are now 37813 reads in the fish1_s10_rep1.filteredReadCounts file.
+
+fish1_s10_rep1 had 448 barcodes in the .passReadCounts file. Filtering removed 436 barcodes.
+There are now 12 barcodes in the fish1_s10_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s10_rep2 had 41842 reads in the .passReadCounts file. Filtering removed 2890 reads.
+There are now 38952 reads in the fish1_s10_rep2.filteredReadCounts file.
+
+fish1_s10_rep2 had 464 barcodes in the .passReadCounts file. Filtering removed 453 barcodes.
+There are now 11 barcodes in the fish1_s10_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s10_rep3 had 35627 reads in the .passReadCounts file. Filtering removed 2140 reads.
+There are now 33487 reads in the fish1_s10_rep3.filteredReadCounts file.
+
+fish1_s10_rep3 had 407 barcodes in the .passReadCounts file. Filtering removed 395 barcodes.
+There are now 12 barcodes in the fish1_s10_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s11_rep1 had 41043 reads in the .passReadCounts file. Filtering removed 3707 reads.
+There are now 37336 reads in the fish1_s11_rep1.filteredReadCounts file.
+
+fish1_s11_rep1 had 622 barcodes in the .passReadCounts file. Filtering removed 610 barcodes.
+There are now 12 barcodes in the fish1_s11_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s11_rep2 had 38583 reads in the .passReadCounts file. Filtering removed 3097 reads.
+There are now 35486 reads in the fish1_s11_rep2.filteredReadCounts file.
+
+fish1_s11_rep2 had 511 barcodes in the .passReadCounts file. Filtering removed 499 barcodes.
+There are now 12 barcodes in the fish1_s11_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s11_rep3 had 33925 reads in the .passReadCounts file. Filtering removed 2815 reads.
+There are now 31110 reads in the fish1_s11_rep3.filteredReadCounts file.
+
+fish1_s11_rep3 had 497 barcodes in the .passReadCounts file. Filtering removed 486 barcodes.
+There are now 11 barcodes in the fish1_s11_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s12_rep1 had 22245 reads in the .passReadCounts file. Filtering removed 1287 reads.
+There are now 20958 reads in the fish1_s12_rep1.filteredReadCounts file.
+
+fish1_s12_rep1 had 350 barcodes in the .passReadCounts file. Filtering removed 335 barcodes.
+There are now 15 barcodes in the fish1_s12_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s12_rep2 had 24512 reads in the .passReadCounts file. Filtering removed 2290 reads.
+There are now 22222 reads in the fish1_s12_rep2.filteredReadCounts file.
+
+fish1_s12_rep2 had 486 barcodes in the .passReadCounts file. Filtering removed 468 barcodes.
+There are now 18 barcodes in the fish1_s12_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish1_s12_rep3 had 14633 reads in the .passReadCounts file. Filtering removed 1150 reads.
+There are now 13483 reads in the fish1_s12_rep3.filteredReadCounts file.
+
+fish1_s12_rep3 had 287 barcodes in the .passReadCounts file. Filtering removed 275 barcodes.
+There are now 12 barcodes in the fish1_s12_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s3_rep1 had 3810 reads in the .passReadCounts file. Filtering removed 893 reads.
+There are now 2917 reads in the fish5_s3_rep1.filteredReadCounts file.
+
+fish5_s3_rep1 had 746 barcodes in the .passReadCounts file. Filtering removed 736 barcodes.
+There are now 10 barcodes in the fish5_s3_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s3_rep2 had 8861 reads in the .passReadCounts file. Filtering removed 1714 reads.
+There are now 7147 reads in the fish5_s3_rep2.filteredReadCounts file.
+
+fish5_s3_rep2 had 1296 barcodes in the .passReadCounts file. Filtering removed 1288 barcodes.
+There are now 8 barcodes in the fish5_s3_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s3_rep3 had 8945 reads in the .passReadCounts file. Filtering removed 1723 reads.
+There are now 7222 reads in the fish5_s3_rep3.filteredReadCounts file.
+
+fish5_s3_rep3 had 1360 barcodes in the .passReadCounts file. Filtering removed 1351 barcodes.
+There are now 9 barcodes in the fish5_s3_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s4_rep1 had 25985 reads in the .passReadCounts file. Filtering removed 2352 reads.
+There are now 23633 reads in the fish5_s4_rep1.filteredReadCounts file.
+
+fish5_s4_rep1 had 738 barcodes in the .passReadCounts file. Filtering removed 728 barcodes.
+There are now 10 barcodes in the fish5_s4_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s4_rep2 had 23608 reads in the .passReadCounts file. Filtering removed 2845 reads.
+There are now 20763 reads in the fish5_s4_rep2.filteredReadCounts file.
+
+fish5_s4_rep2 had 706 barcodes in the .passReadCounts file. Filtering removed 691 barcodes.
+There are now 15 barcodes in the fish5_s4_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s4_rep3 had 23882 reads in the .passReadCounts file. Filtering removed 3604 reads.
+There are now 20278 reads in the fish5_s4_rep3.filteredReadCounts file.
+
+fish5_s4_rep3 had 807 barcodes in the .passReadCounts file. Filtering removed 791 barcodes.
+There are now 16 barcodes in the fish5_s4_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s5_rep1 had 18059 reads in the .passReadCounts file. Filtering removed 1498 reads.
+There are now 16561 reads in the fish5_s5_rep1.filteredReadCounts file.
+
+fish5_s5_rep1 had 420 barcodes in the .passReadCounts file. Filtering removed 408 barcodes.
+There are now 12 barcodes in the fish5_s5_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s5_rep2 had 10991 reads in the .passReadCounts file. Filtering removed 1010 reads.
+There are now 9981 reads in the fish5_s5_rep2.filteredReadCounts file.
+
+fish5_s5_rep2 had 314 barcodes in the .passReadCounts file. Filtering removed 302 barcodes.
+There are now 12 barcodes in the fish5_s5_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s5_rep3 had 18350 reads in the .passReadCounts file. Filtering removed 1738 reads.
+There are now 16612 reads in the fish5_s5_rep3.filteredReadCounts file.
+
+fish5_s5_rep3 had 420 barcodes in the .passReadCounts file. Filtering removed 408 barcodes.
+There are now 12 barcodes in the fish5_s5_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s6_rep1 had 29509 reads in the .passReadCounts file. Filtering removed 2295 reads.
+There are now 27214 reads in the fish5_s6_rep1.filteredReadCounts file.
+
+fish5_s6_rep1 had 866 barcodes in the .passReadCounts file. Filtering removed 852 barcodes.
+There are now 14 barcodes in the fish5_s6_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s6_rep2 had 31529 reads in the .passReadCounts file. Filtering removed 2536 reads.
+There are now 28993 reads in the fish5_s6_rep2.filteredReadCounts file.
+
+fish5_s6_rep2 had 816 barcodes in the .passReadCounts file. Filtering removed 804 barcodes.
+There are now 12 barcodes in the fish5_s6_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s6_rep3 had 31668 reads in the .passReadCounts file. Filtering removed 2589 reads.
+There are now 29079 reads in the fish5_s6_rep3.filteredReadCounts file.
+
+fish5_s6_rep3 had 918 barcodes in the .passReadCounts file. Filtering removed 906 barcodes.
+There are now 12 barcodes in the fish5_s6_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s7_rep1 had 40045 reads in the .passReadCounts file. Filtering removed 3122 reads.
+There are now 36923 reads in the fish5_s7_rep1.filteredReadCounts file.
+
+fish5_s7_rep1 had 804 barcodes in the .passReadCounts file. Filtering removed 791 barcodes.
+There are now 13 barcodes in the fish5_s7_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s7_rep2 had 34499 reads in the .passReadCounts file. Filtering removed 2279 reads.
+There are now 32220 reads in the fish5_s7_rep2.filteredReadCounts file.
+
+fish5_s7_rep2 had 673 barcodes in the .passReadCounts file. Filtering removed 660 barcodes.
+There are now 13 barcodes in the fish5_s7_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s7_rep3 had 36768 reads in the .passReadCounts file. Filtering removed 2982 reads.
+There are now 33786 reads in the fish5_s7_rep3.filteredReadCounts file.
+
+fish5_s7_rep3 had 805 barcodes in the .passReadCounts file. Filtering removed 792 barcodes.
+There are now 13 barcodes in the fish5_s7_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s8_rep1 had 17953 reads in the .passReadCounts file. Filtering removed 1039 reads.
+There are now 16914 reads in the fish5_s8_rep1.filteredReadCounts file.
+
+fish5_s8_rep1 had 326 barcodes in the .passReadCounts file. Filtering removed 312 barcodes.
+There are now 14 barcodes in the fish5_s8_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s8_rep2 had 13642 reads in the .passReadCounts file. Filtering removed 903 reads.
+There are now 12739 reads in the fish5_s8_rep2.filteredReadCounts file.
+
+fish5_s8_rep2 had 301 barcodes in the .passReadCounts file. Filtering removed 288 barcodes.
+There are now 13 barcodes in the fish5_s8_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s8_rep3 had 22981 reads in the .passReadCounts file. Filtering removed 1380 reads.
+There are now 21601 reads in the fish5_s8_rep3.filteredReadCounts file.
+
+fish5_s8_rep3 had 410 barcodes in the .passReadCounts file. Filtering removed 397 barcodes.
+There are now 13 barcodes in the fish5_s8_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s9_rep1 had 43160 reads in the .passReadCounts file. Filtering removed 4012 reads.
+There are now 39148 reads in the fish5_s9_rep1.filteredReadCounts file.
+
+fish5_s9_rep1 had 1089 barcodes in the .passReadCounts file. Filtering removed 1076 barcodes.
+There are now 13 barcodes in the fish5_s9_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s9_rep2 had 44159 reads in the .passReadCounts file. Filtering removed 4452 reads.
+There are now 39707 reads in the fish5_s9_rep2.filteredReadCounts file.
+
+fish5_s9_rep2 had 1422 barcodes in the .passReadCounts file. Filtering removed 1408 barcodes.
+There are now 14 barcodes in the fish5_s9_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s9_rep3 had 38872 reads in the .passReadCounts file. Filtering removed 3110 reads.
+There are now 35762 reads in the fish5_s9_rep3.filteredReadCounts file.
+
+fish5_s9_rep3 had 970 barcodes in the .passReadCounts file. Filtering removed 957 barcodes.
+There are now 13 barcodes in the fish5_s9_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s10_rep1 had 19880 reads in the .passReadCounts file. Filtering removed 1168 reads.
+There are now 18712 reads in the fish5_s10_rep1.filteredReadCounts file.
+
+fish5_s10_rep1 had 393 barcodes in the .passReadCounts file. Filtering removed 380 barcodes.
+There are now 13 barcodes in the fish5_s10_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s10_rep2 had 20697 reads in the .passReadCounts file. Filtering removed 1341 reads.
+There are now 19356 reads in the fish5_s10_rep2.filteredReadCounts file.
+
+fish5_s10_rep2 had 397 barcodes in the .passReadCounts file. Filtering removed 384 barcodes.
+There are now 13 barcodes in the fish5_s10_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s10_rep3 had 25885 reads in the .passReadCounts file. Filtering removed 1783 reads.
+There are now 24102 reads in the fish5_s10_rep3.filteredReadCounts file.
+
+fish5_s10_rep3 had 503 barcodes in the .passReadCounts file. Filtering removed 489 barcodes.
+There are now 14 barcodes in the fish5_s10_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s11_rep1 had 28566 reads in the .passReadCounts file. Filtering removed 2315 reads.
+There are now 26251 reads in the fish5_s11_rep1.filteredReadCounts file.
+
+fish5_s11_rep1 had 620 barcodes in the .passReadCounts file. Filtering removed 614 barcodes.
+There are now 6 barcodes in the fish5_s11_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s11_rep2 had 56419 reads in the .passReadCounts file. Filtering removed 5404 reads.
+There are now 51015 reads in the fish5_s11_rep2.filteredReadCounts file.
+
+fish5_s11_rep2 had 1130 barcodes in the .passReadCounts file. Filtering removed 1123 barcodes.
+There are now 7 barcodes in the fish5_s11_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s11_rep3 had 25357 reads in the .passReadCounts file. Filtering removed 1449 reads.
+There are now 23908 reads in the fish5_s11_rep3.filteredReadCounts file.
+
+fish5_s11_rep3 had 378 barcodes in the .passReadCounts file. Filtering removed 372 barcodes.
+There are now 6 barcodes in the fish5_s11_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s12_rep1 had 46213 reads in the .passReadCounts file. Filtering removed 4233 reads.
+There are now 41980 reads in the fish5_s12_rep1.filteredReadCounts file.
+
+fish5_s12_rep1 had 1182 barcodes in the .passReadCounts file. Filtering removed 1176 barcodes.
+There are now 6 barcodes in the fish5_s12_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s12_rep2 had 43515 reads in the .passReadCounts file. Filtering removed 4125 reads.
+There are now 39390 reads in the fish5_s12_rep2.filteredReadCounts file.
+
+fish5_s12_rep2 had 1165 barcodes in the .passReadCounts file. Filtering removed 1159 barcodes.
+There are now 6 barcodes in the fish5_s12_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish5_s12_rep3 had 70684 reads in the .passReadCounts file. Filtering removed 6278 reads.
+There are now 64406 reads in the fish5_s12_rep3.filteredReadCounts file.
+
+fish5_s12_rep3 had 1553 barcodes in the .passReadCounts file. Filtering removed 1544 barcodes.
+There are now 9 barcodes in the fish5_s12_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s8_rep1 had 25026 reads in the .passReadCounts file. Filtering removed 1057 reads.
+There are now 23969 reads in the fish10_s8_rep1.filteredReadCounts file.
+
+fish10_s8_rep1 had 651 barcodes in the .passReadCounts file. Filtering removed 648 barcodes.
+There are now 3 barcodes in the fish10_s8_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s8_rep2 had 36191 reads in the .passReadCounts file. Filtering removed 1284 reads.
+There are now 34907 reads in the fish10_s8_rep2.filteredReadCounts file.
+
+fish10_s8_rep2 had 779 barcodes in the .passReadCounts file. Filtering removed 774 barcodes.
+There are now 5 barcodes in the fish10_s8_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s8_rep3 had 27797 reads in the .passReadCounts file. Filtering removed 1114 reads.
+There are now 26683 reads in the fish10_s8_rep3.filteredReadCounts file.
+
+fish10_s8_rep3 had 651 barcodes in the .passReadCounts file. Filtering removed 647 barcodes.
+There are now 4 barcodes in the fish10_s8_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s9_rep1 had 95756 reads in the .passReadCounts file. Filtering removed 5113 reads.
+There are now 90643 reads in the fish10_s9_rep1.filteredReadCounts file.
+
+fish10_s9_rep1 had 2801 barcodes in the .passReadCounts file. Filtering removed 2799 barcodes.
+There are now 2 barcodes in the fish10_s9_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s9_rep2 had 77082 reads in the .passReadCounts file. Filtering removed 3658 reads.
+There are now 73424 reads in the fish10_s9_rep2.filteredReadCounts file.
+
+fish10_s9_rep2 had 1966 barcodes in the .passReadCounts file. Filtering removed 1964 barcodes.
+There are now 2 barcodes in the fish10_s9_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s9_rep3 had 95212 reads in the .passReadCounts file. Filtering removed 4900 reads.
+There are now 90312 reads in the fish10_s9_rep3.filteredReadCounts file.
+
+fish10_s9_rep3 had 2418 barcodes in the .passReadCounts file. Filtering removed 2416 barcodes.
+There are now 2 barcodes in the fish10_s9_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s10_rep1 had 50951 reads in the .passReadCounts file. Filtering removed 1891 reads.
+There are now 49060 reads in the fish10_s10_rep1.filteredReadCounts file.
+
+fish10_s10_rep1 had 1097 barcodes in the .passReadCounts file. Filtering removed 1094 barcodes.
+There are now 3 barcodes in the fish10_s10_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s10_rep2 had 53694 reads in the .passReadCounts file. Filtering removed 2274 reads.
+There are now 51420 reads in the fish10_s10_rep2.filteredReadCounts file.
+
+fish10_s10_rep2 had 1086 barcodes in the .passReadCounts file. Filtering removed 1078 barcodes.
+There are now 8 barcodes in the fish10_s10_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fish10_s10_rep3 had 52130 reads in the .passReadCounts file. Filtering removed 1942 reads.
+There are now 50188 reads in the fish10_s10_rep3.filteredReadCounts file.
+
+fish10_s10_rep3 had 1117 barcodes in the .passReadCounts file. Filtering removed 1113 barcodes.
+There are now 4 barcodes in the fish10_s10_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s3_rep1 had 39162 reads in the .passReadCounts file. Filtering removed 2455 reads.
+There are now 36707 reads in the fishctrl3_s3_rep1.filteredReadCounts file.
+
+fishctrl3_s3_rep1 had 2099 barcodes in the .passReadCounts file. Filtering removed 2098 barcodes.
+There is now 1 barcode in the fishctrl3_s3_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s3_rep2 had 86506 reads in the .passReadCounts file. Filtering removed 5624 reads.
+There are now 80882 reads in the fishctrl3_s3_rep2.filteredReadCounts file.
+
+fishctrl3_s3_rep2 had 4244 barcodes in the .passReadCounts file. Filtering removed 4243 barcodes.
+There is now 1 barcode in the fishctrl3_s3_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s3_rep3 had 87625 reads in the .passReadCounts file. Filtering removed 6053 reads.
+There are now 81572 reads in the fishctrl3_s3_rep3.filteredReadCounts file.
+
+fishctrl3_s3_rep3 had 4565 barcodes in the .passReadCounts file. Filtering removed 4564 barcodes.
+There is now 1 barcode in the fishctrl3_s3_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s5_rep1 had 26594 reads in the .passReadCounts file. Filtering removed 2483 reads.
+There are now 24111 reads in the fishctrl3_s5_rep1.filteredReadCounts file.
+
+fishctrl3_s5_rep1 had 804 barcodes in the .passReadCounts file. Filtering removed 794 barcodes.
+There are now 10 barcodes in the fishctrl3_s5_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s5_rep2 had 27552 reads in the .passReadCounts file. Filtering removed 2637 reads.
+There are now 24915 reads in the fishctrl3_s5_rep2.filteredReadCounts file.
+
+fishctrl3_s5_rep2 had 793 barcodes in the .passReadCounts file. Filtering removed 783 barcodes.
+There are now 10 barcodes in the fishctrl3_s5_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s5_rep3 had 23644 reads in the .passReadCounts file. Filtering removed 2090 reads.
+There are now 21554 reads in the fishctrl3_s5_rep3.filteredReadCounts file.
+
+fishctrl3_s5_rep3 had 737 barcodes in the .passReadCounts file. Filtering removed 731 barcodes.
+There are now 6 barcodes in the fishctrl3_s5_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s6_rep1 had 71661 reads in the .passReadCounts file. Filtering removed 4269 reads.
+There are now 67392 reads in the fishctrl3_s6_rep1.filteredReadCounts file.
+
+fishctrl3_s6_rep1 had 2559 barcodes in the .passReadCounts file. Filtering removed 2556 barcodes.
+There are now 3 barcodes in the fishctrl3_s6_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s6_rep2 had 65093 reads in the .passReadCounts file. Filtering removed 3411 reads.
+There are now 61682 reads in the fishctrl3_s6_rep2.filteredReadCounts file.
+
+fishctrl3_s6_rep2 had 2366 barcodes in the .passReadCounts file. Filtering removed 2365 barcodes.
+There is now 1 barcode in the fishctrl3_s6_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s6_rep3 had 81681 reads in the .passReadCounts file. Filtering removed 3983 reads.
+There are now 77698 reads in the fishctrl3_s6_rep3.filteredReadCounts file.
+
+fishctrl3_s6_rep3 had 2645 barcodes in the .passReadCounts file. Filtering removed 2643 barcodes.
+There are now 2 barcodes in the fishctrl3_s6_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s7_rep1 had 62937 reads in the .passReadCounts file. Filtering removed 1963 reads.
+There are now 60974 reads in the fishctrl3_s7_rep1.filteredReadCounts file.
+
+fishctrl3_s7_rep1 had 1732 barcodes in the .passReadCounts file. Filtering removed 1731 barcodes.
+There is now 1 barcode in the fishctrl3_s7_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s7_rep2 had 114067 reads in the .passReadCounts file. Filtering removed 3120 reads.
+There are now 110947 reads in the fishctrl3_s7_rep2.filteredReadCounts file.
+
+fishctrl3_s7_rep2 had 2651 barcodes in the .passReadCounts file. Filtering removed 2650 barcodes.
+There is now 1 barcode in the fishctrl3_s7_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s7_rep3 had 127778 reads in the .passReadCounts file. Filtering removed 3652 reads.
+There are now 124126 reads in the fishctrl3_s7_rep3.filteredReadCounts file.
+
+fishctrl3_s7_rep3 had 3018 barcodes in the .passReadCounts file. Filtering removed 3017 barcodes.
+There is now 1 barcode in the fishctrl3_s7_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s8_rep1 had 39961 reads in the .passReadCounts file. Filtering removed 1297 reads.
+There are now 38664 reads in the fishctrl3_s8_rep1.filteredReadCounts file.
+
+fishctrl3_s8_rep1 had 1026 barcodes in the .passReadCounts file. Filtering removed 1025 barcodes.
+There is now 1 barcode in the fishctrl3_s8_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s8_rep2 had 39367 reads in the .passReadCounts file. Filtering removed 924 reads.
+There are now 38443 reads in the fishctrl3_s8_rep2.filteredReadCounts file.
+
+fishctrl3_s8_rep2 had 845 barcodes in the .passReadCounts file. Filtering removed 844 barcodes.
+There is now 1 barcode in the fishctrl3_s8_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s8_rep3 had 50199 reads in the .passReadCounts file. Filtering removed 1471 reads.
+There are now 48728 reads in the fishctrl3_s8_rep3.filteredReadCounts file.
+
+fishctrl3_s8_rep3 had 1121 barcodes in the .passReadCounts file. Filtering removed 1120 barcodes.
+There is now 1 barcode in the fishctrl3_s8_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s9_rep1 had 98635 reads in the .passReadCounts file. Filtering removed 2907 reads.
+There are now 95728 reads in the fishctrl3_s9_rep1.filteredReadCounts file.
+
+fishctrl3_s9_rep1 had 2123 barcodes in the .passReadCounts file. Filtering removed 2122 barcodes.
+There is now 1 barcode in the fishctrl3_s9_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s9_rep2 had 81412 reads in the .passReadCounts file. Filtering removed 2672 reads.
+There are now 78740 reads in the fishctrl3_s9_rep2.filteredReadCounts file.
+
+fishctrl3_s9_rep2 had 2214 barcodes in the .passReadCounts file. Filtering removed 2213 barcodes.
+There is now 1 barcode in the fishctrl3_s9_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s9_rep3 had 75512 reads in the .passReadCounts file. Filtering removed 2369 reads.
+There are now 73143 reads in the fishctrl3_s9_rep3.filteredReadCounts file.
+
+fishctrl3_s9_rep3 had 1867 barcodes in the .passReadCounts file. Filtering removed 1866 barcodes.
+There is now 1 barcode in the fishctrl3_s9_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s10_rep1 had 88519 reads in the .passReadCounts file. Filtering removed 1991 reads.
+There are now 86528 reads in the fishctrl3_s10_rep1.filteredReadCounts file.
+
+fishctrl3_s10_rep1 had 1689 barcodes in the .passReadCounts file. Filtering removed 1688 barcodes.
+There is now 1 barcode in the fishctrl3_s10_rep1.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s10_rep2 had 92004 reads in the .passReadCounts file. Filtering removed 2494 reads.
+There are now 89510 reads in the fishctrl3_s10_rep2.filteredReadCounts file.
+
+fishctrl3_s10_rep2 had 1967 barcodes in the .passReadCounts file. Filtering removed 1966 barcodes.
+There is now 1 barcode in the fishctrl3_s10_rep2.filteredReadCounts file.
+
+**************************************************************************************** 
+
+fishctrl3_s10_rep3 had 73277 reads in the .passReadCounts file. Filtering removed 1590 reads.
+There are now 71687 reads in the fishctrl3_s10_rep3.filteredReadCounts file.
+
+fishctrl3_s10_rep3 had 1380 barcodes in the .passReadCounts file. Filtering removed 1379 barcodes.
+There is now 1 barcode in the fishctrl3_s10_rep3.filteredReadCounts file.
+
+**************************************************************************************** 
+
