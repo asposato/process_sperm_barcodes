@@ -1,6 +1,6 @@
 Processed GESTALT barcodes from serially sampled sperm data.
 Your job completed at 05:36 PM on 11/16/2024
-Andy Sposato wrote original code written for steps A-D.
+Andy Sposato wrote original code for steps A-D.
 Andy adapted the code in Step E from original code written by Kimberly Truong.
 
 ############################################################################################
